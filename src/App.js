@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import MyHero from "./components/MyHero";
+import MyFooter from "./components/MyFooter";
+import AboutUs from "./components/AboutUs";
+import Impact from "./components/Impact";
+import Faqs from "./components/Faqs";
+import Roadmap from "./components/Roadmap";
+import Preloader from "./components/Preloader";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 function App() {
+  useEffect(() => {
+    AOS.init({ disable: "mobile", duration: 3000, once: true });
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="overflow-hidden">
+        <Preloader/>
+        <MyHero />
+        <AboutUs />
+        <Impact />
+        <Roadmap/>
+        <Faqs />
+        <MyFooter />
+      </div>
+    </>
   );
 }
 
