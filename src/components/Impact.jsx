@@ -31,7 +31,7 @@ const Impact = () => {
                   conservation and environmental preservation.
                 </p>
               </Col>
-              <Col lg={5} sm={8}>
+              <Col lg={5} sm={8} data-aos="fade-left" data-aos-duration="1000">
                 <div className="d-flex justify-content-end">
                   <div className="border_img mt-lg-0 mt-5">
                     <img
