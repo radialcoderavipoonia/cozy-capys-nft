@@ -3,10 +3,12 @@ import footer_logo from "../assets/images/webp/favicon.webp";
 import twitter_footer from "../assets/images/svg/twitter_footer.svg";
 import discord_footer from "../assets/images/svg/discord_footer.svg";
 import insta_footer from "../assets/images/svg/insta_footer.svg";
-import footer_left_img from "../assets/images/webp/footer_left.webp"
-import footer_right_img from "../assets/images/webp/footer_right.webp"
+import footer_left_img from "../assets/images/webp/footer_left.webp";
+import footer_right_img from "../assets/images/webp/footer_right.webp";
 
 const MyFooter = () => {
+  const today = new Date();
+  const year = today.getFullYear();
   return (
     <>
       <section className="bg_lightorange position-relative">
@@ -102,7 +104,7 @@ const MyFooter = () => {
           <div className="footer_line"></div>
           <div className="py-4 text-center">
             <p className="ff_balsamiq fs_xsm fw-normal color_black mb-0 opacity_07 px-2 px-sm-0">
-              Copyright ©2022 All rights reserved Plump Kittens
+              Copyright ©{year} All rights reserved Plump Kittens
             </p>
           </div>
         </div>
